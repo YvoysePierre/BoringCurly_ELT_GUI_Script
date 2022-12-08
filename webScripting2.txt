@@ -1,0 +1,17 @@
+# Write some JS into the developer console
+# Assumes that the JS console will be the tab that opens when pressing f12
+ALERT Hit ok when ready. The script will start after 1 second.
+WAIT 1
+PRESS f12
+WAIT 0.5
+WRITE var arr = [], l = document.links;
+NEWLINE
+WRITE for(var i=0; i<l.length; i++) {arr.push(l[i].href);}
+NEWLINE
+WRITE link = (arr[Math.floor(Math.random()*arr.length)]);
+NEWLINE
+WRITE alert('Going to '+link)
+NEWLINE
+WRITE window.location.href = link
+PRESS enter
+PRESS enter

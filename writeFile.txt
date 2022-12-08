@@ -1,0 +1,4 @@
+CONFIRM This will read a text file and write its contents to your text editor. Click ok and then move your mouse to the text editor...
+WAIT 1.5
+CLICK
+WRITEFILE examples/external/ExampleTextFile.txt

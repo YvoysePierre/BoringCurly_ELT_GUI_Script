@@ -1,0 +1,13 @@
+# Write some JS into the developer console
+# Assumes that the JS console will be the tab that opens when pressing f12
+ALERT Hit ok when ready. The script will start after 1 second.
+WAIT 1
+PRESS f12
+WAIT 0.5
+WRITE document.getElementById('issues-tab').click()
+PRESS enter
+PRESS enter
+WAIT 1.5
+WRITE document.getElementById('pull-requests-tab').click()
+PRESS enter
+PRESS enter

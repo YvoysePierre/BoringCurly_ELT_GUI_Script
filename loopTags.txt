@@ -1,0 +1,7 @@
+# This will loop an confirmation window forever
+
+# Declare the loop
+LOOP A
+CONFIRM This will loop forever. Press Cancel to exit.
+# Call the loop
+LOOP A

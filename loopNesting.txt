@@ -1,0 +1,17 @@
+# This is an example of nesting loops
+# It will run the main loop 2 times
+# Each sub loop will run its full cycle each time the main loop is run
+
+# Declare the loop
+LOOP Main
+CONFIRM This is the main loop. Press Cancel to exit.
+LOOP Sub
+CONFIRM This is a sub loop. Press Cancel to exit.
+# Call the sub-loop
+LOOP Sub 3
+LOOP Sub2
+CONFIRM This is the second sub loop. Press Cancel to exit.
+# Call the second sub-loop
+LOOP Sub2 3
+# Call the loop
+LOOP Main 2

@@ -1,0 +1,6 @@
+# Goto the button location
+GOTO 100,100
+LOOP ClickLoopTag
+CLICK
+WAIT 0.5
+LOOP ClickLoopTag 10

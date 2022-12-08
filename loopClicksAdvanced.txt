@@ -1,0 +1,14 @@
+ALERT Starting script
+# Setup the main loop
+LOOP Main
+# Goto the button location
+GOTO 100,100
+# Setup the sub loop
+LOOP ClickLoopTag
+CLICK
+WAIT 0.5
+# Run the sub loop 10 times
+LOOP ClickLoopTag 10
+# Confirm that we want to continue
+CONFIRM Do you want to keep clicking?
+LOOP Main

@@ -1,0 +1,7 @@
+# This will loop an confirmation window 123 times
+
+# Declare the loop
+LOOP A
+CONFIRM This will loop forever. Press Cancel to exit.
+# Use the loop
+LOOP A 123

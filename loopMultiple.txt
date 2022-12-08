@@ -1,0 +1,12 @@
+# This will loop an confirmation window 3 times for each loop
+
+# Declare the loop
+LOOP A
+CONFIRM This will loop forever. Press Cancel to exit.
+# Call the loop
+LOOP A 3
+# Declare the loop
+LOOP B
+CONFIRM This will loop forever. Press Cancel to exit.
+# Call the loop
+LOOP B 3
