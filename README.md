@@ -1,9 +1,6 @@
-# Cory (Scriptable Python Based GUI Bot) 
-Cory is a python based interpreter for a very simple yet flexible GUI automation scripting language (CoryScript). 
-
-![cory](https://static1.personality-database.com/profile_images/55516dd0a3aa4ea198702184b28b22af.png)
-
-The CoryScript scripting language is very human readable and looks something like SQL. A command to move the mouse to a given position is like this:
+# Boring Curly ELT GUI Scripting Maniuplator Bot
+Curly is a python based interpreter for a very simple yet flexible GUI automation scripting language (CurlelyScript). 
+The CurlyScript scripting language is human readable and in appearance resembles SQL. A command to move the mouse to a given pixel position on your screen would look like this:
 
 ```
 GOTO 100,200
@@ -11,45 +8,47 @@ GOTO 100,200
 
 This will move the mouse to the screen coordinates x=100, y=200.
 
-The goal of Cory is to to decrease the cognitive load and onboarding required to write simple GUI automation scripts. In theory, just about anyone with basic computer knowledge should be able to create a bot with CoryScript. 
+Curly decreases the cognitive load and onboarding required to write simple GUI automation scripts for ELT, when implementing several of the same keystrokes in the same program. Curley is intended to be used for ELT or ETL Data pipelines where such a script can be used, however the applications are virtually limitless. 
 
-The secondary goal of Cory is to provide "free" humanization to your automation scripts. Cory makes it easy to ensure that the bots your create will appear like human users to anyone monitoring the app/website that it is used on. This happens by injecting small amount of randomization into the actions preformed. 
 
-# Running a CoryScript (Setup)
-Before you can use Cory, you need to ensure you have Python3 installed then you need to install the Python dependencies:
+# Running a CurlyScript (Setup)
+Before you can use Curly, you need to ensure you have Python3 installed then you need to install the Python dependencies:
 
+To do so you can run the following commands: 
 ```
 pip install -r requirements.txt
 ```
 
 ```
-python cory.py someScript.txt
+python Curly.py someScript.txt
 ```
 
 # Running Example Scripts
-There are several example scripts in the `/examples` directory. You can run them like this:
+There are several example scripts in the `/examples` directory. 
+
+You can run them like by running this in your Python cmd module:
 ```
-python cory.py examples/someExample.txt
+python Curly.py examples/someExample.txt
 ```
 
 For instance, to run the alert example do:
 ```
-python cory.py examples/alert.txt
+python Curly.py examples/alert.txt
 ```
 
-# Human Mode
-Cory comes with "free humanization". All you need to do to enable it is type `human` at the end of your launch command. 
-
+# Human Randomization Mode
+In circumstances where the labor of continuous loading or transforming may need to appear human in its activity, Curly comes with "humanization".  To enable it type `human` at the end of your launch command. 
+For example: 
 ```
-python cory.py someScript.txt human
+python Curly.py someScript.txt human
 ```
 
-When the `human` flag is added, Cory will automatically do it's best to act like a human. This means adding a little bit or randomization and delay here and there. This won't be enough to trick other actual humans, but it should be enough to get around basic anti-bot detection tools. Essentially it makes it less obvious that Cory is a bot at the expense of your scripts running a little slower. 
+When the `human` flag is added, Curly will behave in a randomized human like fashion.
 
-# CoryScript Syntax
-CoryScript has a very simple syntax. Each line of a script file must contain exactly one command. 
-
-Any empty line will result in a syntax error. Each line must contain a command
+# CurlyScript Syntax
+CurlyScript has a simple syntax. 
+It is important to note that each line of a script file must contain one command. 
+Any empty line will result in a syntax error; again, each line must contain one command.
 
 A command can have anywhere between 0 and 2 arguments supplied
 
@@ -58,33 +57,33 @@ COMMAND ARGUMENT1,ARGUMENT2
 ```
 
 
-**NOTE: Tying the commands in uppercase is not required but it is recommended.** 
+**NOTE: For consistency of for tying the COMMANDS in UPPERCASE is recommended.** 
 
-Some commands have a default argument. If you are using a command with a default argument, you can omit the argument from the line.
+Some commands will have an default argument. If you are using a command with a default argument, you can omit the argument from the line.
 
-Some commands require and argument (no default). If you are using a command that requires an argument and you do not supply one, the script will quit on that line. 
+Some commands require an argument (no default). If you are using a command that requires an argument and you do not supply one, the script will quit on that line. 
 
-A simple CoryScript might look like this:
+A simple CurlyScript might look like this:
 ```
-ALERT Running a new script!
+ALERT Watch Me Run This Fucking Script!
 GOTO 100, 100
 WAIT 2
 CLICK 
 ```
 
-This script will show an alert box with the text "Running a new script!". Once the user clicks "OK" the mouse will be moved to 100, 100. Then the script will wait for 2 seconds and send a mouse click to the current mouse location.
+This script will show an alert box with the text "Watch Me Run This Fucking Script!". Once the user clicks "OK" the mouse will be moved to 100, 100. Then the script will wait for 2 seconds and send a mouse click to the current mouse location.
 
-Cory features basic runtime error handling for CoryScript. If your script contains a syntax error, the script will run up until that point and then quit with an error message shown in your command line output. 
+Curly features basic runtime error handling for CurlyScript. If your script contains a syntax error, the script will run up until that point and then quit with an error message shown in your command line output. 
 
-CoryScript also supports comments. These follow python `#` syntax. 
+CurlyScript also supports comments. These follow python `#` syntax. 
 
 ```
-# This is a comment
+# This is a comment, I’m saying stuff.
 GOTO 100,100
 ```
 
-# Cory Utility (Script Helper Tool)
-When writing CoryScripts, you will often need to know your current screen resolution and mouse position.
+# Curly Utility (Script Helper Tool)
+When writing CurlyScripts, you will often need to know your current screen resolution and mouse position.
 
 To make this easier, there is a python script called `/util.py` that contains a simple helper tool to provide this info.
 
@@ -93,14 +92,13 @@ Run the utility:
 python util.py
 ```
 
-# CoryScript Commands
-## Cheat Sheet
+# CurlyScript Commands
 ```
 EXPECT <X>,<Y>
 GOTO <X>,<Y>
 CLICK <N=1>
 WAIT <N=1>
-HOTKEy <KEY1>,<KEY2>
+HOTKEY <KEY1>,<KEY2>
 NEWLINE <N=1>
 SELECTALL
 FULLSCREEN
@@ -134,18 +132,7 @@ X = X Position
 
 Y = Y Position
 
-**NOTE: In computer software, the origin (0,0) is the top left corner of your screen. This is opposed to traditional graphing math, where the origin is the bottom left.**
 
-```
- 0 1 2 3 . . .
-0
-1
-2
-3
-.
-.
-.
-```
 ## SCROLL
 ```
 SCROLL
@@ -304,7 +291,7 @@ This is a list of acceptable inputs for the HOTKEY and PRESS commands
 ```
 
 # Looping
-Looping is one of the more advanced features of Cory. The `LOOP` command lets you run the same chunk of the script multiple times. This can keep you from needing to type out the same series of commands over and over, and can be used to create an infinite automation loop. 
+Looping is one of the more advanced features of Curly. And I have Mathieu Dombrok to thank for this. The `LOOP` command lets you run the same chunk of the script multiple times. This can keep you from needing to type out the same series of commands over and over, and can be used to create an infinite automation loop. So if you have an infinite amount of flat files to load, and they can’t be loaded into one file, you’re welcome. 
 
 ## Simple Looping
 
@@ -348,9 +335,9 @@ CONFIRM We are in the loop! Press "cancel" to exit.
 LOOP SomeLoopTag
 ```
 
-If we run this script we will get an infinite series of confirmation windows. 
+If we run this script, we will get an infinite series of confirmation windows. 
 
-Notice that the second time we used the `LOOP` command it looked exactly the same. Once a loop point has been declared, any subsequent uses of the `LOOP` command using this same tag will *call the loop* instead of declaring it. By default, calling a loop command without a number after it will run the loop forever. If we want to run it some specific amount of times instead, we can do that like this:
+Notice that the second time we used the `LOOP` command it looked the same. Once a loop point has been declared, any subsequent uses of the `LOOP` command using this same tag will *call the loop* instead of declaring it. By default, calling a loop command without a number after it will run the loop forever. If we want to run it some specific number of times instead, we can do that like this:
 
 ```
 ALERT Starting a loop demo
@@ -398,15 +385,15 @@ LOOP Main 2
 ```
 
 # How Does It Work?
-Cory is essentially a wrapper for the PyAutoGUI module. It works by reading a script file and breaking that file into new lines. 
+Curly is essentially a wrapper for the PyAutoGUI module. It works by reading a script file and breaking that file into new lines. 
 
 Each line is then broken into a command and argument. 
 
-Using the commands `listing` dictionary created in `/commands.py`, Cory checks to see if the current line represents a valid command. 
+Using the commands `listing` dictionary created in `/commands.py`, Curly checks to see if the current line represents a valid command. 
 
 If it does it will execute that command (usually a wrapper for some PyAutoGUI calls) and move on to the next line. 
 
-The logic for reading and parsing the scripts is in `/cory.py`. The logic for each available command (as well as the definition of the commands listing dictionary) is in `/commands.py`. 
+The logic for reading and parsing the scripts is in `/Curly.py`. The logic for each available command (as well as the definition of the commands listing dictionary) is in `/commands.py`. 
 
 -------
 
