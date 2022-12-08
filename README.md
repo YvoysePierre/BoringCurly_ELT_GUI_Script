@@ -10,6 +10,8 @@ This will move the mouse to the screen coordinates x=100, y=200.
 
 Curly decreases the cognitive load and onboarding required to write simple GUI automation scripts for ELT, when implementing several of the same keystrokes in the same program. Curley is intended to be used for ELT or ETL Data pipelines where such a script can be used, however the applications are virtually limitless. 
 
+#General Usage
+My use of Curly has been to automate the keyboard. So in your ELT process everything you do post 'Extraction' phase into 'Load', think of this as an auto loader. 
 
 # Running a CurlyScript (Setup)
 Before you can use Curly, you need to ensure you have Python3 installed then you need to install the Python dependencies:
